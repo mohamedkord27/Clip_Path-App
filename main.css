@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}
+
+.parent{
+    background-color: #eee;
+    width: 230px;
+    height: 250px;
+    margin: 50px auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parent .a-x{
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    font-size: 14px;
+}
+.parent .a-x::before{
+    content: "";
+    position: absolute;
+    width: 81px;
+    height: 2px;
+    background-color: red;
+    left: 48px;
+    top: 8px;
+}
+.parent .a-x::after{
+    content: "";
+    border-width: 7px;
+    border-style: solid;
+    border-color: transparent transparent transparent red;
+    position: absolute;
+    left: 129px;
+    top: 2px;
+}
+.parent .a-y{
+    position: absolute;
+    font-size: 14px;
+    writing-mode: vertical-lr;
+    left: -30px;
+    top: 10px;
+
+}
+.parent .a-y::before {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 81px;
+    background-color: red;
+    left: 8px;
+    top: 48px;
+}
+
+.parent .a-y::after {
+    content: "";
+    border-width: 7px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+    position: absolute;
+    left: 2px;
+    top: 129px;
+}
+.parent .c1{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    clip-path: circle(70px at 50% 50%);
+}
+.parent::after{
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-style: solid;
+    border-color: red green blue black;
+    bottom: -20px;
+    right: -20px;
+}
+.parent .main{
+    position: absolute;
+    width: 230px;
+    height: 250px;
+}
+
+.parent .t1{
+
+    background-color: orange;
+    clip-path: polygon(100% 0%, 100% 100%, 0% 0%);
+}
+.parent .t2{
+    background-color: red;
+    clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
+}
+.parent .t3{
+    background-color: black;
+    clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+}
+.parent .t4{
+    background-color: blue;
+    clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+}
